@@ -1,0 +1,13 @@
+#editor {
+	padding: 1em;
+	font-size: 1rem;
+	font-family: 'Fira Code', monospace;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+	width: 50%;
+	border: none;
+}
+
+#editor::selection {
+	background-color: var(--selection-color);
+}
