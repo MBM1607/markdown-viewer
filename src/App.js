@@ -10,37 +10,58 @@ const App = () => {
 
 	const [markdown, setMarkdown] = useState('');
 
+	const renderHeadings = (line, index) => {
+		if (line.startsWith('##')) {
+			if (line.startsWith('###')) {
+				if (line.startsWith('####')) {
+					if (line.startsWith('#####')) {
+						if (line.startsWith('######')) {
+							return (
+								<h6 key={index}>{line.slice(6)}</h6>
+							);
+						}
+						return (
+							<h5 key={index}>{line.slice(5)}</h5>
+						);
+					}
+					return (
+						<h4 key={index}>{line.slice(4)}</h4>
+					);
+				}
+				return (
+					<h3 key={index}>{line.slice(3)}</h3>
+				);
+			}
+			return (
+				<>
+					<h2 key={index}>{line.slice(2)}</h2>
+					<hr />
+				</>
+			);
+		}
+		return (
+			<>
+				<h1 key={index}>{line.slice(1)}</h1>
+				<hr />
+			</>
+		);
+	};
+
 	const renderMarkdown = (text) => {
-		setMarkdown(
+		return (
 			<>
 				{
-					text.split('\n').map((line, index) => {
-						if (line === '***')
-							return <hr key={index} />
+				text.split('\n').map((line, index) => {
+					if (line === '***') {
+						return <hr key={index} />
+					}
 
-						else if (line[0] === '#')
-							if (line[1] === '#')
-								if (line[2] === '#')
-									return <h3 key={index}>{line.slice(3)}</h3>;
-								else
-									return <h2 key={index}>{line.slice(2)}</h2>;
-							else
-								return (
-									<>
-										<h1 key={index}>{line.slice(1)}</h1>
-										<hr />
-									</>
-								);
+					if (line.startsWith('#')) {
+						return renderHeadings(line, index);
+					}
 
-						else if (line[0] === '*' && line[line.length - 1] === '*')
-							if (line[1] === '*' && line[line.length - 2] === '*')
-								return <p key={index}><strong>{line.slice(2, -2)}</strong></p>
-							else
-								return <p key={index}><em>{line.slice(1, -1)}</em></p>
-
-						else
-							return <p key={index}>{line}</p>
-					})
+					return <p key={index}>{line}</p>
+				})
 				}
 			</>
 		);
@@ -53,7 +74,7 @@ const App = () => {
 				direction='horizontal'
 				gutterSize={5}
 				>
-				<Editor renderMarkdown={renderMarkdown} />
+				<Editor renderMarkdown={(text) => setMarkdown(renderMarkdown(text))} />
 				<Viewer markdown={markdown} />
 
 			</Split>
