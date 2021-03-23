@@ -1,14 +1,10 @@
-import { useState } from 'react';
-
 import './Editor.css';
 
 
-const Editor = ({ renderMarkdown }) => {
-	const [text, setText] = useState('');
+const Editor = ({ text, setText }) => {
 
 	const onChange = (e) => {
 		setText(e.target.value);
-		renderMarkdown(e.target.value);
 	}
 
 	return (

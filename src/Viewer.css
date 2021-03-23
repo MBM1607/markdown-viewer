@@ -1,13 +1,14 @@
-#viewer {
+#preview {
 	padding: 1em;
 	font-size: 1rem;
 	font-family: 'Fira Sans', sans-serif;
 	background-color: var(--background-color);
 	color: var(--foreground-color);
 	width: 50%;
+	overflow: auto;
 }
 
-#viewer p::selection {
+#preview::selection {
 	background-color: var(--selection-color);
 }
 
@@ -15,6 +16,84 @@ hr {
 	color: var(--italic-color);
 }
 
+h1 {
+	font-size: 1.725em;
+	font-weight: 900;
+	padding-bottom: 0.5em;
+	border-bottom: 2px solid var(--italic-color);
+}
+
+h2 {
+	font-size: 1.35em;
+	font-weight: 900;
+	padding-bottom: 0.25em;
+}
+
+h3, h4, h5, h6 {
+	font-weight: 700;
+	font-size: 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+	margin: 0.35em 0;
+}
+
 strong {
 	color: var(--bold-color);
+	font-weight: 700;
+}
+
+blockquote {
+	display: block;
+	border-left: 4px solid var(--italic-color);
+	padding-left: 1.2em;
+	margin: 1em 0;
+}
+
+table {
+	border: 1px solid var(--foreground-color);
+	text-align: left;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: var(--comment-color);
+}
+
+tr:nth-child(even) {
+	background-color: var(--comment-color);
+}
+
+td, th {
+	padding: 0.725em 1em;
+	border: 2px solid var(--foreground-color);
+}
+
+code {
+	border-radius: 5px;
+	border: 2px solid var(--foreground-color);
+	color: var(--bold-color);
+}
+
+pre {
+	padding: 0.25em;
+	border-radius: 5px;
+	background-color: var(--selection-color);
+}
+
+pre code {
+	border-radius: none;
+	border: none;
+}
+
+a {
+	color: var(--cyan-color);
+}
+
+ul, ol {
+	margin-left: 1.5em;
 }
