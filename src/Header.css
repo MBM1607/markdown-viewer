@@ -1,0 +1,21 @@
+header {
+	background-color: var(--background-color);
+	color: var(--red-color);
+	padding: 0.5em;
+	padding-left: 2em;
+	display: flex;
+	width: 100%;
+}
+
+label[for='input-file'] {
+	cursor: pointer;
+	transition: 0.2s ease-in-out all;
+}
+
+label[for='input-file']:hover {
+	background-color: var(--orange-color);
+}
+
+input[type='file'] {
+	display: none;
+}

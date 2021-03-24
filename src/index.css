@@ -21,13 +21,38 @@
 	--italic-color: #bd93f9;
 }
 
-#root > div {
+#root {
 	height: 100vh;
+	background-color: var(--background-color);
+}
+
+#root > div {
 	display: flex;
 	flex-direction: row;
+	height: calc(100% - 5.725em);
+	background-color: var(--background-color);
+	border-top: 5px solid var(--italic-color);
+	border-bottom: 5px solid var(--italic-color);
 }
 
 .gutter {
 	background-color: var(--italic-color);
 	cursor: pointer;
+}
+
+.button {
+	background-color: var(--red-color);
+	color: var(--foreground-color);
+	padding: 0.5em;
+	border-radius: 8px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 2.5em;
+	background-color: var(--background-color);
+	color: var(--red-color);
 }

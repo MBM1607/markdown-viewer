@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Split from 'react-split';
 import marked from 'marked';
 
+import Header from './Header';
 import Editor from './Editor';
 import Viewer from './Viewer';
 
@@ -94,6 +95,7 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
 	return (
 		<>
+			<Header setText={setText} />
 			<Split
 				sizes={[50, 50]}
 				direction='horizontal'
@@ -102,6 +104,9 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 				<Editor text={text} setText={setText} />
 				<Viewer markdown={markdown} />
 			</Split>
+			<footer>
+				<p>&copy; Muhammad Khan</p>
+			</footer>
 		</>
 	);
 }
