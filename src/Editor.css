@@ -1,10 +1,33 @@
+#editor-container {
+	display: flex;
+	flex-direction: row;
+}
+
+#line-numbers {
+	font-family: 'Fira Code', monospace;
+	width: 2rem;
+	font-size: 1rem;
+	line-height: 1.325rem;
+	padding: 1em 0;
+	text-align: center;
+	margin: 0;
+	background-color: var(--background-color);
+	opacity: 0.9;
+	white-space: pre;
+	color: var(--yellow-color);
+	overflow: hidden;
+	height: 100%;
+}
+
 #editor {
 	padding: 1em;
 	font-size: 1rem;
+	line-height: 1.325rem;
 	font-family: 'Fira Code', monospace;
 	background-color: var(--background-color);
 	color: var(--foreground-color);
-	width: 50%;
+	width: calc(100% - 2rem);
+	height: 100%;
 	border: none;
 	resize: none;
 	outline: none;
