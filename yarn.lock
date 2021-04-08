@@ -9192,7 +9192,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^17.0.1":
+"react-dom@*", "react-dom@^17.0.1", "react-dom@>=16.8.0":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -9295,7 +9295,7 @@
     "prop-types" "^15.5.7"
     "split.js" "^1.6.0"
 
-"react@*", "react@^17.0.1", "react@>= 16", "react@>=15.4.2 || >= 16.0.0", "react@17.0.1":
+"react@*", "react@^17.0.1", "react@>= 16", "react@>=15.4.2 || >= 16.0.0", "react@>=16.8.0", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -9891,6 +9891,11 @@
     "@types/json-schema" "^7.0.6"
     "ajv" "^6.12.5"
     "ajv-keywords" "^3.5.2"
+
+"scroll-sync-react@^1.1.8":
+  "integrity" "sha512-6kVdTKaXD4PNVJc0HXa/jrMo6iX9n65NC1zPo6JTwHTvfhpHSvPZyTzH/p6robHJV0nkmpjGhqKeb7G6B1Df/w=="
+  "resolved" "https://registry.npmjs.org/scroll-sync-react/-/scroll-sync-react-1.1.8.tgz"
+  "version" "1.1.8"
 
 "select-hose@^2.0.0":
   "integrity" "sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo="
